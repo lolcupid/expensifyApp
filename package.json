@@ -8,6 +8,7 @@
     "build": "webpack --mode=development --watch",
     "devServer": "webpack-dev-server --mode=development",
     "prod": "webpack -p --env production",
+    "start": "node server/server.js",
     "heroku-postbuild": "npm run prod"
   },
   "keywords": [],
