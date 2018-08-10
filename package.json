@@ -7,7 +7,8 @@
     "serve": "live-server public/",
     "build": "webpack --mode=development --watch",
     "devServer": "webpack-dev-server --mode=development",
-    "prod": "webpack -p --env production"
+    "prod": "webpack -p --env production",
+    "heroku-postbuild": "npm run prod"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,9 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
+    "express": "^4.16.3",
     "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "moment": "^2.22.2",
     "node-sass": "^4.9.2",
     "react": "^16.4.2",
