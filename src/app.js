@@ -10,20 +10,6 @@ import './styles/styles.scss';
 
 const store = configStore();
 
-store.dispatch(addExpense({description: 'water bill', amount: 1000, createdAt: 1000}));
-store.dispatch(addExpense({description: 'gas bill', amount: 300, createdAt: -1000}));
-store.dispatch(addExpense({description: 'rent bill', amount: 550, createdAt: 3000}));
-
-store.dispatch(setTextFilter('water'));
-
-setTimeout(() => {
-  store.dispatch(setTextFilter('bill'));
-}, 3000)
-
-const state = store.getState();
-const visibleExpense = getVisibleExpense(state.expenses, state.filters);
-console.log(visibleExpense);
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />

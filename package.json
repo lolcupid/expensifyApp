@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --mode=development --watch",
-    "devServer": "webpack-dev-server --mode=development"
+    "devServer": "webpack-dev-server --mode=development",
+    "prod": "webpack -p --env production"
   },
   "keywords": [],
   "author": "",
@@ -20,8 +21,10 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
     "live-server": "^1.2.0",
+    "moment": "^2.22.2",
     "node-sass": "^4.9.2",
     "react": "^16.4.2",
+    "react-dates": "^17.1.1",
     "react-dom": "^16.4.2",
     "react-modal": "^3.5.1",
     "react-redux": "^5.0.7",
@@ -35,6 +38,7 @@
     "webpack-dev-server": "^3.1.5"
   },
   "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "uglifyjs-webpack-plugin": "^1.2.7"
   }
 }
