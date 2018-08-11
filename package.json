@@ -27,6 +27,7 @@
     "mini-css-extract-plugin": "^0.4.1",
     "moment": "^2.22.2",
     "node-sass": "^4.9.2",
+    "numeral": "^2.0.6",
     "react": "^16.4.2",
     "react-dates": "^17.1.1",
     "react-dom": "^16.4.2",
