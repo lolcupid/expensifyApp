@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import expenseSelector from '../selector/expenses';
 import expenseSelectorTotal from '../selector/expense-total';
 
-const ExpenseSummary = ({expenseCount, expenseTotal}) => {
+export const ExpenseSummary = ({expenseCount, expenseTotal}) => {
   const expenseWord = expenseCount === 1 ? 'expense' : 'expenses';
   const formattedexpenseTotal = numeral(expenseTotal).format('$0,0.00');
   return (
