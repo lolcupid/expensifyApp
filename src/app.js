@@ -8,6 +8,7 @@ import { login, logout } from './actions/auth';
 import getVisibleExpense from './selector/expenses';
 import './styles/styles.scss';
 import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 const store = configStore();
 
@@ -17,7 +18,6 @@ const jsx = (
   </Provider>
 )
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
 let hasRendered = false;
 const render = () => {
@@ -26,6 +26,8 @@ const render = () => {
     hasRendered = true;
   }
 }
+
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if(user) {

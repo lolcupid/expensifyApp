@@ -81,36 +81,39 @@ export default class ExpenseForm extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onSubmitChange}>
-          <input
-            type="text"
-            onChange={this.onDescriptionChange}
-            value={this.state.description}
-            autoFocus
-          />
-          <input
-            type="number"
-            onChange={this.onAmountChange}
-            value={this.state.amount}
-          />
-          <SingleDatePicker
-            date={this.state.createdAt}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocus}
-            onFocusChange={this.onFocusChange}
-            isOutsideRange={() => false}
-            numberOfMonths={1}
-          />
-          <textarea
-            value={this.state.note}
-            onChange={this.onNoteChange}
-          >
-          </textarea>
-          <button>Add</button>
-        </form>
-      </div>
+      <form className='form-input' onSubmit={this.onSubmitChange}>
+        {this.state.error && <p className='form-input-error'>{this.state.error}</p>}
+        <input className='text-input'
+          type="text"
+          onChange={this.onDescriptionChange}
+          value={this.state.description}
+          placeholder='Description'
+          autoFocus
+        />
+        <input className='text-input'
+          type="number"
+          onChange={this.onAmountChange}
+          value={this.state.amount}
+          placeholder='Amount'
+        />
+        <SingleDatePicker
+          date={this.state.createdAt}
+          onDateChange={this.onDateChange}
+          focused={this.state.calendarFocus}
+          onFocusChange={this.onFocusChange}
+          isOutsideRange={() => false}
+          numberOfMonths={1}
+        />
+        <textarea className='textarea-input'
+          value={this.state.note}
+          onChange={this.onNoteChange}
+          placeholder='Add note for description'
+        >
+        </textarea>
+        <div>
+          <button className='btn'>Add</button>
+        </div>
+      </form>
     )
   }
 }

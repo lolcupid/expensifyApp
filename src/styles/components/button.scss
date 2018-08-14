@@ -1,0 +1,23 @@
+.btn {
+  background: fade-in(#5151ff, .7);
+  border: none;
+  color: white;
+  padding: $m-size $l-size;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  line-height: 0.5;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: white;
+  padding: $m-size $l-size;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+
+.btn-secondary {
+  background: #b9b9b9;
+}

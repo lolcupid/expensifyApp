@@ -1,0 +1,19 @@
+.header_layout {
+  background: $dark-blue;
+
+  .header_layout__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $s-size 0;
+  }
+
+  .header_layout__title {
+    color: white;
+    text-decoration: none;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}

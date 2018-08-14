@@ -4,8 +4,12 @@ import { startLogin } from '../actions/auth';
 
 const Home = ({startLogin}) => {
   return (
-    <div>
-      <button onClick={startLogin}>Login</button>
+    <div className='base_layout'>
+      <div className='base_layout__box'>
+        <h1>Expensify App</h1>
+        <p>It's good to control under Expensify App</p>
+        <button className='btn' onClick={startLogin}>Login With Google</button>
+      </div>
     </div>
   )
 }

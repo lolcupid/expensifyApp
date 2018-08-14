@@ -1,0 +1,23 @@
+.base_layout {
+  background: url('/images/bg.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  .base_layout__box {
+    padding: $l-size $m-size;
+    margin: 25rem;
+    text-align: center;
+    background: fade-out(white, .2);
+    border-radius: 5px;
+  }
+
+  h1 {
+    line-height: 1;
+    margin: 0 0 $m-size 0;
+  }
+
+}
